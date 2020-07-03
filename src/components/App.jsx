@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Hero from './Hero/Hero';
+import React, { useEffect, useState } from 'react';
+import { PortfolioProvider } from '../context/context';
+import { aboutData, contactData, footerData, heroData, projectsData } from '../mock/data';
 import About from './About/About';
-import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-
-import { PortfolioProvider } from '../context/context';
-
-import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import Hero from './Hero/Hero';
+import Projects from './Projects/Projects';
 
 function App() {
   const [hero, setHero] = useState({});

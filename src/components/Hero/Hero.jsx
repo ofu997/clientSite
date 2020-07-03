@@ -1,8 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
+import squareSpace from '../../images/squarespace.png';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -22,12 +23,24 @@ const Header = () => {
   }, []);
 
   return (
-    <section id="hero" className="jumbotron">
-      <Container>
+    <section id="hero" className="jumbotron" style={{ backgroundColor: 'gray' }} >
+      <Container >
+        {
+          isMobile &&
+          <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
+            <h3 style={{ fontWeight: '800' }}>Nathan Ellstrand</h3>
+            <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+            <a href='#about'><p>about</p></a>
+            <a href='#writings'><p>writings</p></a>
+            <a href='#contact'><p>contact</p></a>
+            </nav>
+          </header>
+        }
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <img src={squareSpace} style={{ justifyContent: 'center' }} />
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Your Name'}</span>
+            {/* {title || 'Hi, my name is'}{' '} */}
+            <span className="text-color-main">{name || 'Nathan Ellstrand'}</span>
             <br />
             {subtitle || "I'm the Unknown Developer."}
           </h1>

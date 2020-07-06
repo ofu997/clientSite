@@ -1,12 +1,21 @@
 import React, { useContext } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
+import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
 const Contact = () => {
-  const { contact } = useContext(PortfolioContext);
+  const { contact, footer } = useContext(PortfolioContext);
   const { cta, btn, email } = contact;
+  const { networks } = footer; 
+
+  const networksArray = [
+    {
+      id: 1,
+      name: 'twitter', 
+    }, 
+  ]
 
   return (
     <section id="contact">
@@ -27,6 +36,29 @@ const Contact = () => {
             </a>
           </div>
         </Fade>
+        <span className="back-to-top">
+          <Link to="hero" smooth duration={1000}>
+            <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
+          </Link>
+        </span>
+        <div className="social-links">
+          {networks &&
+            networks.map((network) => {
+              const { id, name, url } = network;
+              return (
+                <a
+                  key={id}
+                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label={name}
+                >
+                  <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
+                </a>
+              );
+            })}
+        </div>
+        <hr />
       </Container>
     </section>
   );

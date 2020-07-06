@@ -23,31 +23,53 @@ const Header = () => {
   }, []);
 
   return (
-    <section id="hero" className="jumbotron" style={{ backgroundColor: 'gray' }} >
+    <section id="hero" className="jumbotron" style={{ backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed' }} >
       <Container >
         {
           isMobile &&
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
-            <h3 style={{ fontWeight: '800' }}>Nathan Ellstrand</h3>
+            {/* <h3 style={{ fontWeight: '800' }}>Nathan Ellstrand</h3> */}
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-            <a href='#about'><p>about</p></a>
-            <a href='#writings'><p>writings</p></a>
-            <a href='#contact'><p>contact</p></a>
+            <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >about</p></a>
+            <a href='#writings'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >writings</p></a>
+            <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >contact</p></a>
             </nav>
           </header>
         }
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          <img src={squareSpace} style={{ justifyContent: 'center' }} />
-          <h1 className="hero-title">
+          <img src={squareSpace} style={{ justifyContent: 'center', marginTop: '15%' }} />
+          <h1 className="hero-title" 
+            style={{ 
+              marginBottom: '15%', 
+              textAlign: 'center' 
+            }}
+          >
             {/* {title || 'Hi, my name is'}{' '} */}
-            <span className="text-color-main">{name || 'Nathan Ellstrand'}</span>
+            <span 
+              className="text-color-main" 
+              style={{ 
+                textShadow: '1px 0px 1px gray, 0px 1px 1px gray, -1px 0px 1px gray, 0px -1px 1px gray',
+              }}>
+                {name || 'Nathan Ellstrand'}
+            </span>
             <br />
-            {subtitle || "I'm the Unknown Developer."}
+            {/* {subtitle || "I'm the NameUnknown Developer."} */}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-          <p className="hero-cta">
-            <span className="cta-btn cta-btn--hero">
+          <p className="hero-cta" 
+            style={{ 
+              justifyContent: 'center',  
+              color: 'black', 
+              textShadow: '1px 0px 1px gray, 0px 1px 1px gray, -1px 0px 1px gray, 0px -1px 1px gray',
+            }}
+          >
+            <span className="cta-btn cta-btn--hero"
+              style={{ 
+                boxShadow: '1px 0px 1px gray, 0px 1px 1px gray, -1px 0px 1px gray, 0px -2px 2px gray',
+                // backgroundImage: 'blue'
+              }}
+            >
               <Link to="about" smooth duration={1000}>
                 {cta || 'Know more'}
               </Link>

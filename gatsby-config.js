@@ -31,5 +31,24 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    {
+      resolve: `gatsby-source-firestore`,
+      options: {
+        credential: require('./firebase.json'),
+        types: [
+          {
+            type: 'Writing',
+            collection: 'writing',
+            map: item => ({
+              date: item.date,
+              description: item.description,
+              image: item.image,
+              link: item.link,
+              title: item.title, 
+            })
+          },
+        ]
+      }
+    },
   ],
 };

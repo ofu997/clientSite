@@ -3,8 +3,8 @@ import { PortfolioProvider } from '../context/context';
 import { aboutData, contactData, footerData, heroData, projectsData } from '../mock/data';
 import About from './About/About';
 import Contact from './Contact/Contact';
-import Footer from './Footer/Footer';
 import Hero from './Hero/Hero';
+import Picture from './Picture/Picture';
 import Projects from './Projects/Projects';
 
 function App() {
@@ -26,9 +26,10 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
+      <Picture />
       <Projects />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </PortfolioProvider>
   );
 }

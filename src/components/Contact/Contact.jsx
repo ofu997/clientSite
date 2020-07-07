@@ -8,13 +8,36 @@ import Title from '../Title/Title';
 const Contact = () => {
   const { contact, footer } = useContext(PortfolioContext);
   const { cta, btn, email } = contact;
-  const { networks } = footer; 
+  // const { networks } = footer; 
 
   const networksArray = [
     {
       id: 1,
       name: 'twitter', 
+      url: 'https://twitter.com/nellstra',
     }, 
+    {
+      id: 2,
+      name: 'linkedin',
+      url: 'https://linkedin.com/in/nathan-ellstrand-070a9611/',
+    },
+    {
+      id: 3,
+      name: 'instagram',
+      url: 'https://instagram.com/somedudenamenate/',
+    },
+    // {
+    //   id: 4,
+    //   name: 'snapchat',
+    // },
+    // {
+    //   id: 5,
+    //   name: 'facebook',
+    // },
+    // {
+    //   id: 6,
+    //   name: 'skype',
+    // }
   ]
 
   return (
@@ -30,7 +53,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
+              href='mailto:nellstrand@luc.edu'
             >
               {btn || "Let's Talk"}
             </a>
@@ -42,8 +65,8 @@ const Contact = () => {
           </Link>
         </span>
         <div className="social-links">
-          {networks &&
-            networks.map((network) => {
+          {
+            networksArray.map((network) => {
               const { id, name, url } = network;
               return (
                 <a

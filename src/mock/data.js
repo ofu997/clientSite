@@ -78,12 +78,12 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/nathan-ellstrand-070a9611/',
     },
     {
       id: nanoid(),
-      name: 'github',
-      url: '',
+      name: 'instagram',
+      url: 'https://www.linkedin.com/in/nathan-ellstrand-070a9611/',
     },
   ],
 };

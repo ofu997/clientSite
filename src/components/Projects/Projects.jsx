@@ -63,7 +63,6 @@ const Projects = () => (
                     }} 
                   />
                   <p style={{ paddingLeft: '2%' }}>{ node.description }</p>
-                  <textarea placeholder={ node.description }></textarea>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"

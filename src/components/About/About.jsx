@@ -49,11 +49,6 @@ const About = () => {
                     research and presented on the sanctuary movement of the 1980s.`
                   }
                 </p>
-                <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }} >
-                  { paragraphTwo ||
-                    ``
-                  }
-                </p>
                 <div style={{ height: 25, border: '' }}></div>
                 <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }} >
                   {paragraphThree || 'Apart from academia, I am passionate about education and social justice. I enjoy eating (I\'m a foodie!), traveling and riding my bike in my free time. Please feel free to contact me with any questions.'}

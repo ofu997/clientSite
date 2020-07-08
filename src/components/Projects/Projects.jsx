@@ -26,22 +26,22 @@ const Projects = () => (
       <section id="writings" style={{ backgroundColor: '#fafafa' }}>
       {/* <Container> */}
         {/* <div className="project-wrapper"> */}
-          <Title title="Papers/Publications" />
+          <Title title="Writing" />
           {/* card format */}
           <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap-reverse', flexDirection: 'row-reverse' }}>
             {
               data.allWriting.edges.map( ({node}) =>
                 <div 
+                  className='cardContainer'
                   style={{ 
-                    width: '40%',  
-                    // border: '2px solid yellow', 
+                    padding: '1%',  
                     boxShadow: '2px 0px 4px gray, 0px 2px 2px gray, -1px 0px 4px white, 0px -1px 2px white' ,
                     textAlign: 'left',
                     marginTop: '2%',
                     marginBottom: '2%',
                   }}
                 >
-                  <h3 style={{ paddingLeft: '2%' }}>{ node.id }</h3>
+                  {/* <h3 style={{ paddingLeft: '2%' }}>{ node.id }</h3> */}
                   <h5 style={{ paddingLeft: '2%' }}>{node.date}</h5>
                   <h5 
                     style={{ 
@@ -62,7 +62,14 @@ const Projects = () => (
                       margin: 'auto',
                     }} 
                   />
-                  <p style={{ paddingLeft: '2%' }}>{ node.description }</p>
+                  <p 
+                    style={{ 
+                      paddingLeft: '2%',
+                      marginTop: '2%',
+                    }}
+                  >
+                    { node.description }
+                  </p>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -70,7 +77,7 @@ const Projects = () => (
                       href={ node.link }
                       style={{ 
                         boxShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white',
-                        margin: '5% 5%',
+                        margin: '5% 4%',
                       }}
                     >
                       Read it

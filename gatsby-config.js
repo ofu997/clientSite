@@ -47,6 +47,14 @@ module.exports = {
               title: item.title, 
             })
           },
+          {
+            type: 'Photos', 
+            collection: 'photos',
+            map: item => ({
+              first: item.first,
+              second: item.second, 
+            })
+          },
         ]
       }
     },

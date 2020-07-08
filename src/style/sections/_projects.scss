@@ -74,6 +74,19 @@
       }
     }
   }
-  // more things
 
+
+}
+
+// responsive cards
+@media all and (max-width: 769px) {
+  .cardContainer {
+    width: 80%,
+  }
+}
+
+@media all and (min-width: 770px) {
+  .cardContainer {
+    width: 40%,
+  }  
 }

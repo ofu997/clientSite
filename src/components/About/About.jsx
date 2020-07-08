@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 // import { Link } from 'react-router-dom';
@@ -54,15 +55,25 @@ const About = () => {
                   {paragraphThree || 'Apart from academia, I am passionate about education and social justice. I enjoy eating (I\'m a foodie!), traveling and riding my bike in my free time. Please feel free to contact me with any questions.'}
                 </p>
                 {resume && (
+                  // <span className="d-flex mt-3" style={{ margin: '10% 5%' }}>
+                  //   <a target="_blank"
+                  //     rel="noopener noreferrer"
+                  //     className="cta-btn cta-btn--resume"
+                  //     href='https://www.docdroid.net/llLbaOu/cv-nathan-ellstrand-pdf'
+                  //   >
+                  //     Resume
+                  //   </a>
+                  // </span>
+
                   <span className="d-flex mt-3" style={{ margin: '10% 5%' }}>
-                    <a target="_blank"
-                      rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
-                      href='https://www.docdroid.net/llLbaOu/cv-nathan-ellstrand-pdf'
-                    >
-                      Resume
-                    </a>
-                  </span>
+                      <Link to='/resume'>
+                        <a className="cta-btn cta-btn--resume">
+                          Resume
+                        </a>
+                      </Link>
+                  </span>                  
+
+ 
                 )}
               </div>
             </Fade>

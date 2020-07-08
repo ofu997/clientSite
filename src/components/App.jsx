@@ -7,10 +7,10 @@ import Hero from './Hero/Hero';
 import Picture from './Picture/Picture';
 import Projects from './Projects/Projects';
 
-// navbar, 
-// pics as variables, 
+// navbar, __________________
+// pics as variables, _______
 // firestore data____________
-// responsive cards
+// responsive cards__________
 
 function App() {
   const [hero, setHero] = useState({});

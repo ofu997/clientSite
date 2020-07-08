@@ -30,9 +30,9 @@ const Header = () => {
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
             {/* <h3 style={{ fontWeight: '800' }}>Nathan Ellstrand</h3> */}
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-            <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >about</p></a>
-            <a href='#writings'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >writings</p></a>
-            <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >contact</p></a>
+            <a href='#About'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >about</p></a>
+            <a href='#Writing'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >writings</p></a>
+            <a href='#Contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >contact</p></a>
             </nav>
           </header>
         }
@@ -48,7 +48,7 @@ const Header = () => {
             <span 
               className="text-color-main" 
               style={{ 
-                textShadow: '1px 0px 1px gray, 0px 1px 1px gray, -1px 0px 1px gray, 0px -1px 1px gray',
+                textShadow: '1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
               }}>
                 {name || 'Nathan Ellstrand'}
             </span>
@@ -61,12 +61,12 @@ const Header = () => {
             style={{ 
               justifyContent: 'center',  
               color: 'black', 
-              textShadow: '1px 0px 1px gray, 0px 1px 1px gray, -1px 0px 1px gray, 0px -1px 1px gray',
+              textShadow: '1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
             }}
           >
             <span className="cta-btn cta-btn--hero"
               style={{ 
-                boxShadow: '1px 0px 1px gray, 0px 1px 1px gray, -1px 0px 1px gray, 0px -2px 2px gray',
+                boxShadow: '1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
                 // backgroundImage: 'blue'
               }}
             >

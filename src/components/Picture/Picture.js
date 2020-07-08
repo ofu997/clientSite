@@ -2,35 +2,54 @@
 import React, { useEffect, useState } from 'react';
 
 const Picture = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
+  // const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [height, setHeight] = useState(0);
+
+  const imageStyle=isMobile?
+    {
+      backgroundSize: 'auto 100%', 
+      backgroundPosition:'center',
+      backgroundRepeat: 'no-repeat', 
+      backgroundAttachment: 'fixed',
+      backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
+      height: `${height}px`,
+    }:
+    {
+      backgroundSize: 'cover', 
+      backgroundPosition:'center',
+      backgroundRepeat: 'no-repeat', 
+      backgroundAttachment: 'fixed',
+      backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
+      height: `${height}px`,
+    };
   useEffect(() => {
     if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      // setIsMobile(false);
+      // setIsDesktop(true);
+      setIsMobile(false);
+      setHeight(750);
     } else {
-      // setIsMobile(true);
-      setIsDesktop(false);
+      setIsMobile(true);
+      setHeight(550); 
+      // setIsDesktop(false);
     }
   }, []);
-  const height=isDesktop? 750:550;
-  console.log(height);
+  // const height=isMobile? 550:750;
 
   return(
     <>
       <div 
-        style={{ 
-          backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)', 
-          // backgroundImage: `url(${data.allPhotos.edges.node.second})`,
-          filter: 'sepia(50%)',
-          backgroundRepeat  : 'no-repeat', 
-          backgroundSize: 'cover', 
-          backgroundAttachment: 'fixed', 
-          height: `${height}px`
-        }}  
+        // style={{ 
+        //   backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)', 
+        //   filter: 'sepia(50%)',
+        //   backgroundRepeat  : 'no-repeat', 
+        //   backgroundSize: 'cover', 
+        //   backgroundAttachment: 'fixed', 
+        //   height: `${height}px`
+        // }}  
+        style={imageStyle}
       >
       </div>
-      {/* <p>{data.allPhotos.edges.node.second}</p> */}
     </>
   )
 }

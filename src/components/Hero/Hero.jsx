@@ -12,6 +12,22 @@ const Header = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  const imageStyle = isMobile? 
+    {
+      backgroundSize: 'auto 100%', 
+      backgroundPosition:'center',
+      backgroundRepeat: 'no-repeat', 
+      backgroundAttachment: 'fixed',
+      backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',
+    }:
+    {
+      backgroundSize: 'cover', 
+      backgroundPosition:'center',
+      backgroundRepeat: 'no-repeat', 
+      backgroundAttachment: 'fixed',
+      backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', 
+    };
+
   useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
@@ -23,16 +39,25 @@ const Header = () => {
   }, []);
 
   return (
-    <section id="hero" className="jumbotron" style={{ backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed' }} >
+    <section id="hero" className="jumbotron" 
+      // style={{ 
+      //   backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', 
+      //   // backgroundPosition: 'center', 
+      //   // backgroundRepeat: 'no-repeat', 
+      //   // backgroundSize: 'cover', 
+      //   backgroundAttachment: 'fixed'
+      // }} 
+      style={imageStyle}
+    >
       <Container >
         {
           isMobile &&
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
             {/* <h3 style={{ fontWeight: '800' }}>Nathan Ellstrand</h3> */}
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-            <a href='#About'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >about</p></a>
-            <a href='#Writing'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >writings</p></a>
-            <a href='#Contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >contact</p></a>
+            <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >About</p></a>
+            <a href='#writings'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Writing</p></a>
+            <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Contact</p></a>
             </nav>
           </header>
         }

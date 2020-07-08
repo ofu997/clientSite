@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
-// import { Link } from 'react-router-dom';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 

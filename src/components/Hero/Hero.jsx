@@ -1,9 +1,11 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { useContext, useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import squareSpace from '../../images/squarespace.png';
+// import background from './background';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -19,6 +21,7 @@ const Header = () => {
       backgroundRepeat: 'no-repeat', 
       backgroundAttachment: 'fixed',
       backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',
+      // backgroundImage: `url(${background})`, 
     }:
     {
       backgroundSize: 'cover', 
@@ -26,6 +29,7 @@ const Header = () => {
       backgroundRepeat: 'no-repeat', 
       backgroundAttachment: 'fixed',
       backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', 
+      // backgroundImage: `url(${background})`, 
     };
 
   useEffect(() => {
@@ -37,6 +41,23 @@ const Header = () => {
       setIsDesktop(false);
     }
   }, []);
+
+  const data=useStaticQuery(graphql`
+    query {
+      file(relativePath:  { eq: "nathanWallpaper.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }      
+    }
+  `)
+
+  // const background = () =>
+  // <Img 
+  //   fluid={data.file.childImageSharp.fluid}
+  // />
 
   return (
     <section id="hero" className="jumbotron" 

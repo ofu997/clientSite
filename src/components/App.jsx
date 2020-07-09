@@ -5,6 +5,7 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import Hero from './Hero/Hero';
 import Picture from './Picture/Picture';
+import Picture2 from './Picture/Picture2';
 import Projects from './Projects/Projects';
 
 // navbar, __________________
@@ -32,6 +33,7 @@ function App() {
       <Hero />
       <About />
       <Picture />
+      <Picture2 />
       <Projects />
       <Contact />
       {/* <Footer /> */}

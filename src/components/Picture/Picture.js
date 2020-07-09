@@ -11,9 +11,10 @@ const Picture = () => {
       backgroundSize: 'auto 100%', 
       backgroundPosition:'center',
       backgroundRepeat: 'no-repeat', 
-      backgroundAttachment: 'fixed',
+      backgroundAttachment: 'initial',
       backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
       height: `${height}px`,
+      display: 'none',
     }:
     {
       backgroundSize: 'cover', 

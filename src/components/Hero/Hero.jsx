@@ -24,7 +24,7 @@ const Header = () => {
     }:
     {
       backgroundAttachment: 'fixed',
-      backgroundSize: 'auto 100%',
+      backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',

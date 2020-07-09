@@ -16,20 +16,18 @@ const Header = () => {
 
   const imageStyle = isMobile? 
     {
-      backgroundSize: 'auto 100%', 
-      backgroundPosition:'center',
-      backgroundRepeat: 'no-repeat', 
-      backgroundAttachment: 'fixed',
+      backgroundAttachment: 'initial',
+      backgroundSize: 'auto 100%',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',
-      // backgroundImage: `url(${background})`, 
     }:
     {
-      backgroundSize: 'cover', 
-      backgroundPosition:'center',
-      backgroundRepeat: 'no-repeat', 
       backgroundAttachment: 'fixed',
-      backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', 
-      // backgroundImage: `url(${background})`, 
+      backgroundSize: 'auto 100%',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',
     };
 
   useEffect(() => {
@@ -60,14 +58,9 @@ const Header = () => {
   // />
 
   return (
-    <section id="hero" className="jumbotron" 
-      // style={{ 
-      //   backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)', 
-      //   // backgroundPosition: 'center', 
-      //   // backgroundRepeat: 'no-repeat', 
-      //   // backgroundSize: 'cover', 
-      //   backgroundAttachment: 'fixed'
-      // }} 
+    <section 
+      id="hero" 
+      className="jumbotron"
       style={imageStyle}
     >
       <Container >

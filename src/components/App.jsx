@@ -4,7 +4,6 @@ import { aboutData, contactData, footerData, heroData, projectsData } from '../m
 import About from './About/About';
 import Contact from './Contact/Contact';
 import Hero from './Hero/Hero';
-import Picture from './Picture/Picture';
 import Picture2 from './Picture/Picture2';
 import Projects from './Projects/Projects';
 
@@ -32,7 +31,7 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
-      <Picture />
+      {/* <Picture /> */}
       <Picture2 />
       <Projects />
       <Contact />

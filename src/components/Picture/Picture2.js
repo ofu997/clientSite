@@ -19,14 +19,12 @@ const Picture2 = () => (
 
     render={data => {
       return (
-
         <BackgroundImage 
           className='backgroundImage'
           fluid={data.file.childImageSharp.fluid} 
         >
           {/* <h2>background from picture 2</h2> */}
         </BackgroundImage>
-
       );
     }}
   />

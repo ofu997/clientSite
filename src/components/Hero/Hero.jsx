@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
-import squareSpace from '../../images/squarespace.png';
+// import squareSpace from '../../images/squarespace.png';
 // import background from './background';
 
 const Header = () => {
@@ -76,7 +76,8 @@ const Header = () => {
           </header>
         }
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          <img src={squareSpace} style={{ justifyContent: 'center', marginTop: '15%' }} />
+          {/* <img src={squareSpace} style={{ justifyContent: 'center', marginTop: '15%' }} /> */}
+          <div style={{ marginTop: '15%' }}></div>
           <h1 className="hero-title" 
             style={{ 
               marginBottom: '15%', 

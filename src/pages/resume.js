@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import PortfolioContext from '../../context/context';
 
 const Resume = () => {
   const [width, setWidth]=useState('');
@@ -15,8 +14,6 @@ const Resume = () => {
         display: 'block',
         margin: 'auto',
         backgroundColor: '#2c2c2c',   
-        // width:{width},
-        // height:{height},
       }}
     >
       <object 

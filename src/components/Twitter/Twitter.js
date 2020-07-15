@@ -9,23 +9,17 @@ const Twitter = () => {
   }, []);
   return(
   <>
-  {/* <iframe title='widget 'width="430" height="500" src='https://twitter.com/nellstra'frameborder="0"></iframe>
-  <a class="twitter-timeline" data-height="600" href="https://twitter.com/nellstra?ref_src=twsrc%5Etfw">Tweets by nellstra</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
     <section id='twitter' className="twitterContainer" style={{ backgroundColor: '#fafafa' }}
       style={{  
         display: 'block', 
         margin: '50px auto', 
-        // maxHeight: 700, 
         maxWidth: 650, 
-        // border: '2px solid black' 
       }}
     >
       <a href='https://twitter.com/nellstra' target="_blank" rel="noopener noreferrer"><Title title='Recent Twitter Activity' /></a>
       <div className="twitter-embed" 
-        // style={{ display: 'flex', flexWrap: 'wrap', border: '2px solid green' }}
       >
         <div 
-          // style={{ width: '20%', border: '2px solid gold' }}
         >
           <a
             className="twitter-timeline"
@@ -34,7 +28,6 @@ const Twitter = () => {
             data-chrome="noheader nofooter noborders"
             href="https://twitter.com/nellstra"
           >
-            {/* Tweets by HeyMarkKop */}
           </a>
         </div>
       </div>

@@ -1,16 +1,11 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-import PortfolioContext from '../../context/context';
 import bg1 from '../../images/nathanBackground1.jpg';
 import bg2 from '../../images/nathanBackground2.jpg';
 
 const Header = () => {
-  const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
-
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [image, setImage] = useState('');
@@ -44,18 +39,6 @@ const Header = () => {
     if (random===2) { setImage(bg2) }
   }, []);
 
-  const data=useStaticQuery(graphql`
-    query {
-      file(relativePath:  { eq: "nathanWallpaper.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }      
-    }
-  `)
-
   return (
     <section 
       id="hero" 
@@ -86,7 +69,7 @@ const Header = () => {
               style={{ 
                 textShadow: '1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
               }}>
-                {name || 'Nathan Ellstrand'}
+                Nathan Ellstrand
             </span>
             <br />
           </h1>
@@ -105,7 +88,7 @@ const Header = () => {
               }}
             >
               <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
+                Know more
               </Link>
             </span>
           </p>

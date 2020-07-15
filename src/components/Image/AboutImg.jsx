@@ -1,4 +1,3 @@
-// don't need this
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';

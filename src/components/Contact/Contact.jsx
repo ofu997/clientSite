@@ -1,15 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
 const Contact = () => {
-  const { contact, footer } = useContext(PortfolioContext);
-  const { cta, btn, email } = contact;
-  // const { networks } = footer; 
-
   const networksArray = [
     {
       id: 1,
@@ -26,18 +21,6 @@ const Contact = () => {
       name: 'book',
       url: 'https://luc.academia.edu/NathanEllstrand',
     },
-    // {
-    //   id: 4,
-    //   name: 'snapchat',
-    // },
-    // {
-    //   id: 5,
-    //   name: 'facebook',
-    // },
-    // {
-    //   id: 6,
-    //   name: 'skype',
-    // }
   ]
 
   return (
@@ -54,7 +37,7 @@ const Contact = () => {
               className="cta-btn cta-btn--resume"
               href='mailto:nellstrand@luc.edu'
             >
-              {btn || "Email"}
+              Email
             </a>
           </div>
         </Fade>
@@ -67,7 +50,7 @@ const Contact = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  href={url}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}

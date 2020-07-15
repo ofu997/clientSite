@@ -4,8 +4,8 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
-// import squareSpace from '../../images/squarespace.png';
-// import background from './background';
+import bg1 from '../../images/nathanBackground1.jpg';
+import bg2 from '../../images/nathanBackground2.jpg';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -13,21 +13,22 @@ const Header = () => {
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [image, setImage] = useState('');
 
   const imageStyle = isMobile? 
     {
       backgroundAttachment: 'initial',
       backgroundSize: 'auto 100%',
-      backgroundPosition: 'center',
+      backgroundPosition: 'top',
       backgroundRepeat: 'no-repeat',
-      backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',
+      backgroundImage: `url(${image})`,
     }:
     {
       backgroundAttachment: 'fixed',
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'top',
       backgroundRepeat: 'no-repeat',
-      backgroundImage: 'url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg)',
+      backgroundImage: `url(${image})`,
     };
 
   useEffect(() => {
@@ -38,6 +39,9 @@ const Header = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
+    const random=Math.floor((Math.random()*2)+1);
+    if (random===1) { setImage(bg1) }
+    if (random===2) { setImage(bg2) }
   }, []);
 
   const data=useStaticQuery(graphql`
@@ -52,11 +56,6 @@ const Header = () => {
     }
   `)
 
-  // const background = () =>
-  // <Img 
-  //   fluid={data.file.childImageSharp.fluid}
-  // />
-
   return (
     <section 
       id="hero" 
@@ -67,16 +66,14 @@ const Header = () => {
         {
           isMobile &&
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
-            {/* <h3 style={{ fontWeight: '800' }}>Nathan Ellstrand</h3> */}
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
             <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >About</p></a>
-            <a href='#writings'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Writing</p></a>
+            <a href='#twitter'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Twitter</p></a>
             <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Contact</p></a>
             </nav>
           </header>
         }
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          {/* <img src={squareSpace} style={{ justifyContent: 'center', marginTop: '15%' }} /> */}
           <div style={{ marginTop: '15%' }}></div>
           <h1 className="hero-title" 
             style={{ 
@@ -84,7 +81,6 @@ const Header = () => {
               textAlign: 'center' 
             }}
           >
-            {/* {title || 'Hi, my name is'}{' '} */}
             <span 
               className="text-color-main" 
               style={{ 
@@ -93,7 +89,6 @@ const Header = () => {
                 {name || 'Nathan Ellstrand'}
             </span>
             <br />
-            {/* {subtitle || "I'm the NameUnknown Developer."} */}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
@@ -107,7 +102,6 @@ const Header = () => {
             <span className="cta-btn cta-btn--hero"
               style={{ 
                 boxShadow: '1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
-                // backgroundImage: 'blue'
               }}
             >
               <Link to="about" smooth duration={1000}>

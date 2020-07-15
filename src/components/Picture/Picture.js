@@ -1,5 +1,6 @@
 // import { graphql, StaticQuery } from 'gatsby';
 import React, { useEffect, useState } from 'react';
+import Nathan from '../../../src/images/nathanAboutMe.jpg';
 
 const Picture = () => {
   // const [isDesktop, setIsDesktop] = useState(false);
@@ -12,7 +13,8 @@ const Picture = () => {
       backgroundPosition:'center',
       backgroundRepeat: 'no-repeat', 
       backgroundAttachment: 'initial',
-      backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
+      // backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
+      backgroundImage: `url(${Nathan})`,
       height: `${height}px`,
       display: 'none',
     }:
@@ -21,7 +23,8 @@ const Picture = () => {
       backgroundPosition:'center',
       backgroundRepeat: 'no-repeat', 
       backgroundAttachment: 'fixed',
-      backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
+      // backgroundImage: 'url(https://pbs.twimg.com/media/EZJJrAJXQAAf1VV?format=jpg&name=900x900)',
+      backgroundImage: `url(${Nathan})`,
       height: `${height}px`,
     };
   useEffect(() => {

@@ -23,8 +23,8 @@ const Contact = () => {
     },
     {
       id: 3,
-      name: 'instagram',
-      url: 'https://instagram.com/somedudenamenate/',
+      name: 'book',
+      url: 'https://luc.academia.edu/NathanEllstrand',
     },
     // {
     //   id: 4,
@@ -44,26 +44,22 @@ const Contact = () => {
     <section id="contact">
       <Container>
         <Title title="Contact" />
+        <div style={{ height: 40 }}></div>
         <Fade bottom duration={1000} delay={800} distance="30px">
           <div className="contact-wrapper">
-            <p className="contact-wrapper__text">
-              {cta || 'Would you like to work with me? Awesome!'}
-            </p>
+
             <a
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
               href='mailto:nellstrand@luc.edu'
             >
-              {btn || "Let's Talk"}
+              {btn || "Email"}
             </a>
           </div>
         </Fade>
-        <span className="back-to-top">
-          <Link to="hero" smooth duration={1000}>
-            <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
-          </Link>
-        </span>
+
+        <div style={{ height: 40 }}></div>
         <div className="social-links">
           {
             networksArray.map((network) => {
@@ -81,6 +77,11 @@ const Contact = () => {
               );
             })}
         </div>
+        <span className="back-to-top">
+          <Link to="hero" smooth duration={1000}>
+            <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
+          </Link>
+        </span>        
         <hr />
       </Container>
     </section>

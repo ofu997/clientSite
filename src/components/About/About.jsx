@@ -34,35 +34,33 @@ const About = () => {
         <div>
           <Title title="About Me" />
           <div className='aboutMeImageAndDescription' style={{ margin: 'auto' }}>
-              <div className='about-wrapper__image' style={{ width: '30%', display: 'block', margin: 'auto', alignItems: 'center' }}>
-                <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="oh" />
+            <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="oh" />
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+              <div className="about-wrapper__info" 
+                style={{ 
+                  width: '90%', 
+                  alignItems: 'center', 
+                  margin: 'auto', 
+                  // centers the button
+                  justifyContent: 'center',
+                }}
+              >
+                <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }} >
+                  {paragraph1}
+                </p>
+                <div style={{ height: 25 }}></div>
+                <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5% 7% 5%' }} >
+                  {paragraph2}
+                </p>
+                <span className="d-flex mt-3" style={{ display: 'block', margin: '0 auto' }}>
+                    <Link to='/resume'>
+                      <a className="cta-btn cta-btn--resume">
+                        CV
+                      </a>
+                    </Link>
+                </span>                  
               </div>
-              <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-                <div className="about-wrapper__info" 
-                  style={{ 
-                    width: '60%', 
-                    alignItems: 'center', 
-                    margin: 'auto', 
-                    // centers the button
-                    justifyContent: 'center',
-                  }}
-                >
-                  <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }} >
-                    {paragraph1}
-                  </p>
-                  <div style={{ height: 25 }}></div>
-                  <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5% 7% 5%' }} >
-                    {paragraph2}
-                  </p>
-                  <span className="d-flex mt-3" style={{ display: 'block', margin: '0 auto' }}>
-                      <Link to='/resume'>
-                        <a className="cta-btn cta-btn--resume">
-                          CV
-                        </a>
-                      </Link>
-                  </span>                  
-                </div>
-              </Fade>
+            </Fade>
             </div>
         </div>
       </section>

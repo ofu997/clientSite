@@ -52,13 +52,15 @@ const About = () => {
                 <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5% 7% 5%' }} >
                   {paragraph2}
                 </p>
-                <span className="d-flex mt-3" style={{ display: 'block', margin: '0 auto' }}>
-                    <Link to='/resume'>
-                      <a className="cta-btn cta-btn--resume">
-                        CV
-                      </a>
-                    </Link>
-                </span>                  
+                <p className='about-cta'>
+                  <span className="d-flex mt-3" style={{ display: 'block', margin: '0 auto' }}>
+                      <Link to='/resume'>
+                        <a className="cta-btn cta-btn--resume">
+                          CV
+                        </a>
+                      </Link>
+                  </span>       
+                </p>           
               </div>
             </Fade>
             </div>
@@ -88,13 +90,23 @@ const About = () => {
           </Fade>
         </div>
         <div style={{height: 100 }}></div>
-        <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
+        {/* <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
           <Link to='/resume'>
             <a className="cta-btn cta-btn--resume">
               CV
             </a>
           </Link>
-        </span>   
+        </span>    */}
+
+        <p className='about-cta'>
+          <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
+            <Link to='/resume'>
+              <a className="cta-btn cta-btn--resume">
+                CV
+              </a>
+            </Link>
+          </span>   
+        </p>
       </div>
     </section>
   );

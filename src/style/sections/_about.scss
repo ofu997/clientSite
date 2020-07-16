@@ -78,4 +78,19 @@
       }
     }
   }
+  .about-cta {
+    display: flex;
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+
+    & a {
+      font-size: 2.6rem;
+
+      @include respond(phone) {
+        font-size: 2.2rem;
+      }
+    }
+  }  
 }

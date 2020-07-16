@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-import bg1 from '../../images/nathanBackground1.jpg';
-import bg2 from '../../images/nathanBackground2.jpg';
+import bg1 from '../../images/1enhanced1.jpg';
+import bg2 from '../../images/2enhanced.jpg';
+import bg3 from '../../images/4enhanced.jpg';
+import bg4 from '../../images/5enhanced1.jpg';
+import bg5 from '../../images/6enhanced1.jpg';
 
 const Header = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [image, setImage] = useState('');
+  const [backgroundPosition, setbgp ] = useState('top'); 
 
   const imageStyle = isMobile? 
     {
@@ -17,11 +21,13 @@ const Header = () => {
       backgroundPosition: 'top',
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${image})`,
+
     }:
     {
       backgroundAttachment: 'fixed',
       backgroundSize: 'cover',
-      backgroundPosition: 'top',
+      // backgroundPosition: 'top',
+      backgroundPosition: `${backgroundPosition}`,
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${image})`,
     };
@@ -34,9 +40,12 @@ const Header = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-    const random=Math.floor((Math.random()*2)+1);
+    const random=Math.floor((Math.random()*5)+1);
     if (random===1) { setImage(bg1) }
     if (random===2) { setImage(bg2) }
+    if (random===3) { setImage(bg3) }
+    if (random===4) { setImage(bg4); setbgp('center bottom')}
+    if (random===5) { setImage(bg5) }
   }, []);
 
   return (
@@ -50,9 +59,10 @@ const Header = () => {
           isMobile &&
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-            <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >About</p></a>
-            <a href='#twitter'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Twitter</p></a>
-            <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Contact</p></a>
+              <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >About</p></a>
+              <a href='https://nathanellstrand.com/resume'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Resume</p></a>
+              <a href='#twitter'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Twitter</p></a>
+              <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Contact</p></a>
             </nav>
           </header>
         }

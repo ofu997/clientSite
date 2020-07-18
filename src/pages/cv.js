@@ -5,7 +5,7 @@ const Resume = () => {
   const [height, setHeight]=useState(1);
   useEffect(() => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight*0.99); 
+    setHeight(window.innerHeight*0.98); 
   }, []);
 
   return(
@@ -18,14 +18,12 @@ const Resume = () => {
         overflowY: 'hidden',
       }}
     >
-      <object 
+      <iframe
         width={width} 
         height={height} 
-        // data="https://www.docdroid.net/llLbaOu/cv-nathan-ellstrand-pdf"
-        data='https://www.docdroid.net/GnZBqxl/cv-nathan-ellstrand-pdf'
-        // data='https://www.scribd.com/document/469542708/CVupdatedNathan-Ellstrand'
+        src='https://www.docdroid.net/GnZBqxl/cv-nathan-ellstrand-pdf'
       >
-      </object>
+      </iframe>
     </div>
   );
 }

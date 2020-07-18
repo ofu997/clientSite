@@ -54,8 +54,8 @@ const About = () => {
                 </p>
                 <p className='about-cta'>
                   <span className="d-flex mt-3" style={{ display: 'block', margin: '0 auto' }}>
-                      <Link to='/resume'>
-                        <a className="cta-btn cta-btn--resume">
+                      <Link to='/cv'>
+                        <a className="cta-btn cta-btn--cv">
                           CV
                         </a>
                       </Link>
@@ -82,7 +82,7 @@ const About = () => {
               <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }}>
                 {paragraph1}
               </p>
-              <div style={{ height: 25 }}></div>
+              <br />
               <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5%' }} >
                 {paragraph2}
               </p>
@@ -93,7 +93,7 @@ const About = () => {
         <p className='about-cta'>
           <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
             <Link to='/cv'>
-              <a className="cta-btn cta-btn--resume">
+              <a className="cta-btn cta-btn--cv">
                 CV
               </a>
             </Link>

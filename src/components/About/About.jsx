@@ -60,7 +60,7 @@ const About = () => {
                         </a>
                       </Link>
                   </span>       
-                </p>           
+                </p>                               
               </div>
             </Fade>
             </div>
@@ -78,29 +78,21 @@ const About = () => {
             <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="oh" />
           </div>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-            <div className="about-wrapper__info" style={{ width: '60%', alignItems: 'center' }}>
+            <div className="about-wrapper__info" style={{ width: '40%', minHeight: 350, alignItems: 'space-between', border: '' }}>
               <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }}>
                 {paragraph1}
               </p>
               <div style={{ height: 25 }}></div>
-              <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5% 7% 5%' }} >
+              <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5%' }} >
                 {paragraph2}
               </p>
             </div>
           </Fade>
         </div>
         <div style={{height: 100 }}></div>
-        {/* <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
-          <Link to='/resume'>
-            <a className="cta-btn cta-btn--resume">
-              CV
-            </a>
-          </Link>
-        </span>    */}
-
         <p className='about-cta'>
           <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
-            <Link to='/resume'>
+            <Link to='/cv'>
               <a className="cta-btn cta-btn--resume">
                 CV
               </a>

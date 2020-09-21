@@ -93,4 +93,25 @@
       }
     }
   }  
+
+  @media (max-width: 769px) {
+    .aboutMeImageAndDescription {
+      flex-direction: column
+    }
+    .about-wrapper__image {
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 770px) {
+    .aboutMeImageAndDescription {
+      flex-direction: row;
+      // justify-content: space-around;
+    }
+    .about-wrapper__info {
+      width: 40%;
+      min-height: 350px;
+      align-items: space-between;
+    }
+  }
 }

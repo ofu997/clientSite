@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import AboutImg from '../Image/AboutImg';
@@ -28,57 +28,31 @@ const About = () => {
   research and presented on the sanctuary movement of the 1980s.`;
   const paragraph2='Apart from academia, I am passionate about education and social justice. I enjoy eating (I\'m a foodie!), traveling and riding my bike in my free time. Please feel free to contact me with any questions.'
 
-  if (isMobile) {
-    return (
-      <section id="about" style={{ backgroundColor: '#082567' }}>
-        <div>
-          <Title title="About Me" />
-          <div className='aboutMeImageAndDescription' style={{ margin: 'auto' }}>
-            <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="oh" />
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-              <div className="about-wrapper__info" 
-                style={{ 
-                  width: '90%', 
-                  alignItems: 'center', 
-                  margin: 'auto', 
-                  // centers the button
-                  justifyContent: 'center',
-                }}
-              >
-                <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }} >
-                  {paragraph1}
-                </p>
-                <div style={{ height: 25 }}></div>
-                <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5% 7% 5%' }} >
-                  {paragraph2}
-                </p>
-                <p className='about-cta'>
-                  <span className="d-flex mt-3" style={{ display: 'block', margin: '0 auto' }}>
-                      <Link to='/cv'>
-                        <a className="cta-btn cta-btn--cv">
-                          CV
-                        </a>
-                      </Link>
-                  </span>       
-                </p>                               
-              </div>
-            </Fade>
-            </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="about" style={{ backgroundColor: '#082567' }}>
       <div>
         <Title title="About Me" />
-        <div className='aboutMeImageAndDescription' style={{ display: 'flex', margin: 'auto', justifyContent: 'center' }}>
-          <div className='about-wrapper__image' style={{ width: '30%' }}>
-            <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="oh" />
+        <div className='aboutMeImageAndDescription' 
+          style={{ 
+            display: 'flex',
+             margin: 'auto', 
+             justifyContent: 'center' 
+          }}
+        >
+          <div className='about-wrapper__image' 
+            // style={{ width: '30%' }}
+          >
+            <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="Me at the Billy Elliot musical!" />
           </div>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-            <div className="about-wrapper__info" style={{ width: '40%', minHeight: 350, alignItems: 'space-between', border: '' }}>
+            <div className="about-wrapper__info" 
+              style={{ 
+                // width: '40%', 
+                // minHeight: 350, 
+                // alignItems: 'space-between', 
+                // border: '' 
+              }}
+            >
               <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }}>
                 {paragraph1}
               </p>
@@ -92,11 +66,9 @@ const About = () => {
         <div style={{height: 100 }}></div>
         <p className='about-cta'>
           <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
-            <Link to='/cv'>
-              <a className="cta-btn cta-btn--cv">
-                CV
-              </a>
-            </Link>
+            <a className="cta-btn cta-btn--cv" href="https://luc.academia.edu/NathanEllstrand/CurriculumVitae" rel='noopener noreferrer' target='_blank'>
+              CV
+            </a>
           </span>   
         </p>
       </div>

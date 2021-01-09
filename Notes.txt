@@ -1,0 +1,7 @@
+Troubleshooting after git clone:
+  - use node 12.18.3
+  - update npm to latest
+  - git rm -rf node_modules
+  - remove package-lock.json
+  - npm i
+  - install gatsby cli globally

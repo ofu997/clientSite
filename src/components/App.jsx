@@ -4,7 +4,7 @@ import { aboutData, contactData, footerData, heroData, projectsData } from '../m
 import About from './About/About';
 import Contact from './Contact/Contact';
 import Hero from './Hero/Hero';
-import Twitter from './Twitter/Twitter';
+// import Twitter from './Twitter/Twitter';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -25,7 +25,7 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
-      <Twitter />
+      {/* <Twitter /> */}
       <Contact />
     </PortfolioProvider>
   );

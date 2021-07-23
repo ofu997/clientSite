@@ -18,7 +18,9 @@ const About = () => {
     }
   }, []);
 
-  const paragraph1=`Hello! I am a PhD candidate in History at Loyola University Chicago. Among various
+  const paragraph1=`Hello! 
+  I am a PhD Candidate in History and Arthur J. Schmitt Fellow at Loyola University Chicago, 
+  and a Visiting Student Researcher at the University of California, Berkeley. Among various
   topics, I am interested in United States-Latin American transnational history,
   ideology, and borderlands. I am currently writing my dissertation on the political
   activities of the Unión Nacional Sinarquista, a right-wing Mexican Catholic organization, 

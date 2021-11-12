@@ -44,7 +44,7 @@ const About = () => {
           <div className='about-wrapper__image' 
             // style={{ width: '30%' }}
           >
-            <AboutImg isMobile={isMobile} filename="nathanAboutMe.jpg" alt="Me at the Billy Elliot musical!" />
+            <AboutImg isMobile={isMobile} filename="nathanNewAboutMe.jpg" alt="Nathan Ellstrand's profile picture" />
           </div>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
             <div className="about-wrapper__info" 

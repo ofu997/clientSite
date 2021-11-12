@@ -60,8 +60,8 @@ const Header = () => {
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
               <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >About</p></a>
-              <a href='https://nathanellstrand.com/cv'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >CV</p></a>
-              <a href='#twitter'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Twitter</p></a>
+              <a href="https://luc.academia.edu/NathanEllstrand/CurriculumVitae" rel='noopener noreferrer' target='_blank'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >CV</p></a>
+              {/* <a href='#twitter'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Twitter</p></a> */}
               <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Contact</p></a>
             </nav>
           </header>

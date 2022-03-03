@@ -18,17 +18,17 @@ const About = () => {
     }
   }, []);
 
-  const paragraph1=`Hello! 
-  I am a PhD Candidate in History and Arthur J. Schmitt Fellow at Loyola University Chicago, 
-  and a Visiting Student Researcher at the University of California, Berkeley. Among various
-  topics, I am interested in United States-Latin American transnational history,
-  ideology, and borderlands. I am currently writing my dissertation on the political
-  activities of the Unión Nacional Sinarquista, a right-wing Mexican Catholic organization, 
-  in the United States during World War II. My work for my Masters in Latin American Studies at the 
-  University of California, San Diego covered women\'s leadership in the Partido Liberal Mexicano while 
-  the party was in exile in early twentieth century Los Angeles. I have also conducted 
-  research and presented on the sanctuary movement of the 1980s.`;
-  const paragraph2='Apart from academia, I am passionate about education and social justice. I enjoy eating (I\'m a foodie!), traveling and riding my bike in my free time. Please feel free to contact me with any questions.'
+  const paragraph1=`I am a Doctor in History and Arthur J. Schmitt Fellow at Loyola University Chicago,
+  and a Visiting Student Researcher at the University of California, Berkeley.  Among various topics, 
+  I am interested in United States-Latin American transnational history, ideology, and borderlands.  I 
+  recently finished my dissertation on the anti-communist, Catholic, and nationalist Mexican Unión
+  Nacional Sinarquista (National Synarchist Union) within the context of the United States during World
+  War II.  My work for my Masters in Latin American Studies at the University of California, San Diego
+  covered women\'s leadership in the Partido Liberal Mexicano while the party was in exile in early
+  twentieth century Los Angeles.  I have also conducted research and presented on the sanctuary movement
+  of the 1980s.`;
+  const paragraph2=`Apart from academia, I am passionate about education and social justice. I enjoy eating
+  (he\'s a foodie!) and traveling in my free time. Please feel free to contact me with any questions.`
 
   return (
     <section id="about" style={{ backgroundColor: '#082567' }}>

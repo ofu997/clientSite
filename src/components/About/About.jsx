@@ -28,7 +28,7 @@ const About = () => {
   twentieth century Los Angeles.  I have also conducted research and presented on the sanctuary movement
   of the 1980s.`;
   const paragraph2=`Apart from academia, I am passionate about education and social justice. I enjoy eating
-  (he\'s a foodie!) and traveling in my free time. Please feel free to contact me with any questions.`
+  (I\'m a foodie!) and traveling in my free time. Please feel free to contact me with any questions.`
 
   return (
     <section id="about" style={{ backgroundColor: '#082567' }}>

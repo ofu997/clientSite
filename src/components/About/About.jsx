@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import AboutImg from '../Image/AboutImg';
 import Title from '../Title/Title';
+import aboutText from '../../text';
+import { curriculumVitae } from '../../links';
 
 const About = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -18,18 +20,6 @@ const About = () => {
     }
   }, []);
 
-  const paragraph1=`I am a Doctor in History and Arthur J. Schmitt Fellow at Loyola University Chicago,
-  and a Visiting Student Researcher at the University of California, Berkeley.  Among various topics, 
-  I am interested in United States-Latin American transnational history, ideology, and borderlands.  I 
-  recently finished my dissertation on the anti-communist, Catholic, and nationalist Mexican Unión
-  Nacional Sinarquista (National Synarchist Union) within the context of the United States during World
-  War II.  My work for my Masters in Latin American Studies at the University of California, San Diego
-  covered women\'s leadership in the Partido Liberal Mexicano while the party was in exile in early
-  twentieth century Los Angeles.  I have also conducted research and presented on the sanctuary movement
-  of the 1980s.`;
-  const paragraph2=`Apart from academia, I am passionate about education and social justice. I enjoy eating
-  (I\'m a foodie!) and traveling in my free time. Please feel free to contact me with any questions.`
-
   return (
     <section id="about" style={{ backgroundColor: '#082567' }}>
       <div>
@@ -41,26 +31,13 @@ const About = () => {
              justifyContent: 'center' 
           }}
         >
-          <div className='about-wrapper__image' 
-            // style={{ width: '30%' }}
-          >
+          <div className='about-wrapper__image'>
             <AboutImg isMobile={isMobile} filename="nathanNewAboutMe.jpg" alt="Nathan Ellstrand's profile picture" />
           </div>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-            <div className="about-wrapper__info" 
-              style={{ 
-                // width: '40%', 
-                // minHeight: 350, 
-                // alignItems: 'space-between', 
-                // border: '' 
-              }}
-            >
-              <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%' }}>
-                {paragraph1}
-              </p>
-              <br />
-              <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0% 5%' }} >
-                {paragraph2}
+            <div className="about-wrapper__info" >
+              <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%', whiteSpace: 'pre-line'}}>
+                {aboutText}
               </p>
             </div>
           </Fade>
@@ -68,7 +45,7 @@ const About = () => {
         <div style={{height: 100 }}></div>
         <p className='about-cta'>
           <span className="d-flex mt-3" style={{ margin: 'auto', justifyContent: 'center' }}>
-            <a className="cta-btn cta-btn--cv" href="https://luc.academia.edu/NathanEllstrand/CurriculumVitae" rel='noopener noreferrer' target='_blank'>
+            <a className="cta-btn cta-btn--cv" href={curriculumVitae} rel='noopener noreferrer' target='_blank'>
               CV
             </a>
           </span>   

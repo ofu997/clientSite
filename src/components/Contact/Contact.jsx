@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import Title from '../Title/Title';
+import {academia, email} from '../../../src/links';
 
 const Contact = () => {
   const networksArray = [
@@ -19,7 +20,7 @@ const Contact = () => {
     {
       id: 3,
       name: 'book',
-      url: 'https://luc.academia.edu/NathanEllstrand',
+      url: academia
     },
   ]
 
@@ -35,7 +36,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--cv"
-              href='mailto:nellstrand@luc.edu'
+              href={`mailto:${email}`}
             >
               Email
             </a>

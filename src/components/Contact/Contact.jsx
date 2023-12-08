@@ -9,7 +9,7 @@ const Contact = () => {
   const networksArray = [
     {
       id: 1,
-      name: 'twitter', 
+      name: 'brands fa-x-twitter',
       url: 'https://twitter.com/nellstra',
     }, 
     {
@@ -57,6 +57,7 @@ const Contact = () => {
                   aria-label={name}
                 >
                   <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
+                  <i className="fa fa-brand fa-x-twitter" />
                 </a>
               );
             })}

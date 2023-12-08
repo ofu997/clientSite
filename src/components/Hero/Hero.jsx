@@ -5,8 +5,13 @@ import { Link } from 'react-scroll';
 import bg1 from '../../images/1enhanced1.jpg';
 import bg2 from '../../images/2enhanced.jpg';
 import bg3 from '../../images/4enhanced.jpg';
-import bg4 from '../../images/5enhanced1.jpg';
+import bg4 from '../../images/Yucatan-transformed.jpeg';
 import bg5 from '../../images/6enhanced1.jpg';
+import bg6 from '../../images/CDMX-transformed.jpeg';
+import bg7 from '../../images/Riverside-transformed.jpeg';
+import bg8 from '../../images/San_Diego.jpg';
+import bg9 from '../../images/Wilmette-transformed.jpeg';
+
 import { curriculumVitae } from '../../links';
 
 const Header = () => {
@@ -27,7 +32,6 @@ const Header = () => {
     {
       backgroundAttachment: 'fixed',
       backgroundSize: 'cover',
-      // backgroundPosition: 'top',
       backgroundPosition: `${backgroundPosition}`,
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${image})`,
@@ -41,12 +45,16 @@ const Header = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-    const random=Math.floor((Math.random()*5)+1);
+    const random=Math.floor((Math.random()*9)+1);
     if (random===1) { setImage(bg1) }
     if (random===2) { setImage(bg2) }
     if (random===3) { setImage(bg3) }
     if (random===4) { setImage(bg4); setbgp('center bottom')}
     if (random===5) { setImage(bg5) }
+    if (random===6) { setImage(bg6) }
+    if (random===7) { setImage(bg7); setbgp('center bottom')}
+    if (random===8) { setImage(bg8); setbgp('center bottom')}
+    if (random===9) { setImage(bg9) }
   }, []);
 
   return (
@@ -62,7 +70,6 @@ const Header = () => {
             <nav style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
               <a href='#about'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >About</p></a>
               <a href={curriculumVitae} rel='noopener noreferrer' target='_blank'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >CV</p></a>
-              {/* <a href='#twitter'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Twitter</p></a> */}
               <a href='#contact'><p style={{ textShadow: '2px 0px 2px white, 0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white' }} >Contact</p></a>
             </nav>
           </header>

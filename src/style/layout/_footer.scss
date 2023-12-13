@@ -51,6 +51,7 @@
     height: 5rem;
     margin: $default-font-size $default-font-size;
     transition: all 0.2s ease-in;
+    margin: 0rem 5rem;
 
     &:hover {
       transform: translateY(-2px);
@@ -60,7 +61,7 @@
 
 .back-to-top i {
   color: $white-color;
-  margin: 1rem 0 $default-font-size;
+  margin: 5rem 0 $default-font-size;
   transition: all 0.2s ease-in;
   cursor: pointer;
 

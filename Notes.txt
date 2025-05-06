@@ -1,5 +1,5 @@
 Troubleshooting after git clone:
-  - use node 12.18.3
+  - use node 12.18.3, npm 6.14.6
   - update npm to latest
   - git rm -rf node_modules
   - remove package-lock.json

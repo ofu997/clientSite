@@ -1,23 +1,24 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import Title from '../Title/Title';
-import { academia, email } from '../../links';
+import { academia, email, linkedin, blueSky } from '../../links';
 import academiaImg from '../../images/academia.svg';
-import x from '../../images/x.svg';
+import blueSkyImage from '../../images/Bluesky_Logo.svg';
 
 const Contact = () => {
   const networksArray = [
     {
       id: 1,
-      name: x,
-      url: 'https://twitter.com/nellstra',
+      name: blueSkyImage,
+      url: blueSky
     },
     {
       id: 2,
       name: 'linkedin',
-      url: 'https://linkedin.com/in/nathan-ellstrand-070a9611/',
+      url: linkedin
     },
     {
       id: 3,
@@ -52,11 +53,13 @@ const Contact = () => {
               <a key={id} href={url} rel="noopener noreferrer" target="_blank" aria-label={name}>
                 {id === 2 ? (
                   <div
-                    className={`fa fa-${name || 'refresh'} fa-inverse`}
+                    className={`fa fa-${name || 'refresh'} fa-inverse`} 
                     style={{ fontSize: '40px' }}
+                    height={40} 
+                    width={40}
                   />
                 ) : (
-                  <img src={name} height="30" width="30" alt="linkedin icon" />
+                  <img src={name} height="40" width="40" alt="contact icon" />
                 )}
               </a>
             );

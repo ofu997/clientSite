@@ -28,7 +28,7 @@
     "gatsby-source-firestore": "^1.0.3",
     "gatsby-transformer-sharp": "^2.5.5",
     "intersection-observer": "^0.11.0",
-    "nanoid": "^3.1.31",
+    "nanoid": "^3.3.11",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -38,7 +38,7 @@
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.16",
     "react-tilt": "^0.1.4",
-    "sharp": "^0.30.5"
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
